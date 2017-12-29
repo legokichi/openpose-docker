@@ -1,0 +1,15 @@
+diff --git a/include/openpose/wrapper/wrapper.hpp b/include/openpose/wrapper/wrapper.hpp
+index 99e2355..c4e7644 100644
+--- a/include/openpose/wrapper/wrapper.hpp
++++ b/include/openpose/wrapper/wrapper.hpp
+@@ -906,7 +906,7 @@ namespace op
+                 const auto originalVideoFps = (wrapperStructInput.producerSharedPtr->get(CV_CAP_PROP_FPS) > 0.
+                                                ? wrapperStructInput.producerSharedPtr->get(CV_CAP_PROP_FPS) : 30.);  
+                 const auto videoSaver = std::make_shared<VideoSaver>(
+-                    wrapperStructOutput.writeVideo, CV_FOURCC('M','J','P','G'), originalVideoFps, finalOutputSize
++                    wrapperStructOutput.writeVideo, CV_FOURCC('M','P','4','V'), originalVideoFps, finalOutputSize
+                 );
+                 mOutputWs.emplace_back(std::make_shared<WVideoSaver<TDatumsPtr>>(videoSaver));
+             }
+
+

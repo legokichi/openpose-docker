@@ -1,0 +1,11 @@
+[Unit]
+Description=NFSWatch
+
+[Service]
+ExecStart=/opt/openpose-docker/nfs_watch.py --dir /nfs/openpose/
+Restart=always
+Type=forking
+PIDFile=/var/run/nfs_watch.pid
+
+[Install]
+WantedBy=multi-user.target
